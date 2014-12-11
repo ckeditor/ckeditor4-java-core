@@ -1,8 +1,9 @@
 CKEditor for Java 4
 ===================
 
-Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.  
-For licensing, see LICENSE.md or http://ckeditor.com/license
+**Important Note**
+
+The CKEditor for Java code is still **work in progress**. Its official release will be announced on http://ckeditor.com. 
 
 CKEditor for Java is a server-side integration for CKEditor. It allows you to use this popular JavaScript editor 
 in Java Server Pages (JSP) as a custom JSP tag or as a Java Object integrated with the code of your web application.
@@ -10,8 +11,8 @@ in Java Server Pages (JSP) as a custom JSP tag or as a Java Object integrated wi
 ## Documentation
 
 CKEditor for Java comes with documented code. If you are using it inside your IDE, through Maven, you can also 
-import the `ckeditor-java-core-4.0-javadoc.jar` so that you get descriptions of all 
-CKEditor for Java classes, properties and methods you use in your web application. 
+import the `ckeditor-java-core-4.0-javadoc.jar` file in order to get descriptions of all 
+CKEditor for Java classes, properties and methods you can use in your web application. 
 
 The CKEditor for Java API is also available online at: http://link-to-api.com
 
@@ -19,11 +20,10 @@ The full developer documentation for the CKEditor for Java integration is availa
 
 ## Integration
 
-Integrating CKEditor for Java with your web application is an easy task. 
-You can do it in three different ways. Just follow these steps:
+Integrating CKEditor for Java with your web application can be done in three different ways. Just follow these steps:
 
- 1. In all three cases you need to get the standard JavaScript CKEditor installation package from http://ckeditor.com/download
- 	and put it in a folder of your choice inside your web application.  
+ * In all three cases you need to get the standard JavaScript CKEditor installation package from http://ckeditor.com/download
+ 	and put it in a folder of your choice inside your web application. 
  
 ### Maven
  
@@ -48,12 +48,12 @@ You can do it in three different ways. Just follow these steps:
   2. **Extract** (decompress) the `zip` file to the `WEB-INF/lib` folder
   	of your web application.
 
-## CKEditor for Java Integration in Action
+## CKEditor for Java Samples
 
 A sample application with examples showing how to use CKEditor for Java in a web 
 application is available at: http://link-to-sample-app.com.
 
-To install the sample application, put the `war` file into your server.
+To install the sample application, put the downloaded `war` file into your server.
 
 To test your installation, call the following page of your website:
 
@@ -62,3 +62,8 @@ To test your installation, call the following page of your website:
 For example:
 
 	http://www.example.com/ckeditor-java/samples/index.jsp
+
+## License
+
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.  
+For licensing, see LICENSE.md or http://ckeditor.com/license
