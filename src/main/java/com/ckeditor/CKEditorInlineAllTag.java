@@ -7,7 +7,7 @@ package com.ckeditor;
 /**
  * The {@code CKEditorInlineAllTag} class is used to create the JavaScript
  * {@code inlineAll} method which creates inline editor instances inside all
- * editable elements on a JSP.
+ * editable elements on JSP.
  * <p>
  * <strong>Usage on JSP:</strong>
  *

@@ -14,7 +14,7 @@ import com.ckeditor.Utils;
 /**
  * The {@code CKEditor} class is used to create CKEditor objects in Java. Such
  * objects can then be put in scope (like in a request or a session) and read
- * with Expression Lagunage (EL) on JSP. Another possibility is using the
+ * with Expression Language (EL) on JSP. Another possibility is using the
  * {@code CKEditor} class directly on JSP with scriptlets. Please note, however,
  * that scriptlets, although not deprecated, are discouraged and it is best not
  * to use them.
@@ -54,7 +54,7 @@ public class CKEditor {
         INSERT;
 
         /**
-         * Enumeration of markers for the CKEditor JavaScript mulitple instances
+         * Enumeration of markers for the CKEditor JavaScript multiple instances
          * creation methods.
          *
          */
@@ -101,13 +101,13 @@ public class CKEditor {
     private Methods creationMethod = Methods.REPLACE_ALL;
 
     /**
-     * The Boolean flag informing whether CKEditor was initialized with base
+     * Boolean flag informing whether CKEditor was initialized with base
      * parameters.
      */
     private boolean initialized;
 
     /**
-     * Name of a CSS marker class used to identify {@code <textarea>} elements
+     * Name of the CSS marker class used to identify {@code <textarea>} elements
      * which will be replaced by editor instances.
      */
     private String className;
@@ -143,7 +143,7 @@ public class CKEditor {
     /**
      * Full or relative path to the CKEditor installation directory. If a full
      * path is used, the {@code CKEDITOR_BASEPATH} global variable will be
-     * inserted into the JSP.
+     * inserted into JSP.
      */
     private String basePath;
 
@@ -182,7 +182,7 @@ public class CKEditor {
     }
 
     /**
-     * Represents the JavaScript {@code replaceAll} method&#x2e; On a JSP it
+     * Represents the JavaScript {@code replaceAll} method&#x2e; On JSP it
      * replaces all {@code <textarea>} elements whose CSS class matches the
      * class name provided as an argument to this constructor with CKEditor
      * instances.
@@ -191,7 +191,7 @@ public class CKEditor {
      * @param basePath a string representing an absolute or a relative path to
      * the CKEditor installation directory.
      * @param className the name of the CSS marker class used to identify
-     * {@code <textarea>} elements on which the editor should be created.
+     * {@code <textarea>} elements that will be replaced with CKEditor.
      */
     public CKEditor(HttpServletRequest request, String basePath,
             String className) {
@@ -200,7 +200,7 @@ public class CKEditor {
     }
 
     /**
-     * Represents the JavaScript {@code replaceAll} method&#x2e; On a JSP it
+     * Represents the JavaScript {@code replaceAll} method&#x2e; On JSP it
      * replaces all {@code <textarea>} elements whose CSS class matches the
      * class name provided as an argument to this constructor with CKEditor
      * instances.<br>
@@ -208,10 +208,10 @@ public class CKEditor {
      * instance configuration.
      *
      * @param request current {@code HttpServletRequest} instance.
-     * @param basePath a string representing absolute or relative path to
-     * CKEditor installation directory.
+     * @param basePath a string representing an absolute or a relative path to
+     * the CKEditor installation directory.
      * @param className the name of the CSS marker class used to identify
-     * {@code <textarea>} elements on which the editor should be created.
+     * {@code <textarea>} elements that will be replaced with CKEditor.
      * @param config the CKEditor configuration object storing this editor
      * instance custom configuration.
      */
@@ -223,15 +223,15 @@ public class CKEditor {
 
     /**
      * Represents the JavaScript {@code replaceAll} or {@code inlineAll}
-     * method&#x2e; On a JSP it replaces all {@code <textarea>} elements with
+     * method&#x2e; It replaces all {@code <textarea>} elements on JSP with
      * CKEditor instances or creates inline editors inside all
-     * {@code contenteditable} elements available on a JSP.
+     * {@code contenteditable} elements available on JSP.
      *
      * @param request current {@code HttpServletRequest} instance.
      * @param basePath a string representing an absolute or a relative path to
      * the CKEditor installation directory.
      * @param creationMethod the {@code Enum} marker indicating which JavaScript
-     * method should be used to create the editor instance. Only
+     * method should be used to create editor instances. Only
      * {@code CKEditor.Methods.Multi} enumeration values are allowed.
      */
     public CKEditor(HttpServletRequest request, String basePath,
@@ -247,7 +247,7 @@ public class CKEditor {
 
     /**
      * Represents the JavaScript {@code replace} method, however, it does not
-     * require the {@code <textarea>} tag to be available on the JSP.
+     * require the {@code <textarea>} tag to be available on JSP.
      * <p>
      * This constructor inserts the HTML {@code <textarea>} element into the
      * page and then replaces it with an editor instance.
@@ -256,7 +256,7 @@ public class CKEditor {
      * @param basePath a string representing an absolute or a relative path to
      * the CKEditor installation directory.
      * @param instanceName the name or ID of the {@code <textarea>} element that
-     * is to be inserted into the JSP.
+     * is to be inserted into JSP.
      * @param value the initial HTML code for a CKEditor instance.
      * @param textareaAttributes the {@code Map} of key-value pairs representing
      * {@code <textarea>} attributes and their values. The list of attributes
@@ -264,8 +264,8 @@ public class CKEditor {
      *            href="http://www.w3schools.com/tags/tag_textarea.asp">
      * W3Schools</a> website.<br>
      * Please note, however, that attributes useful for CKEditor or that have
-     * any influence on it are {@code rows}, {@code cols}, {@code disabled} and
-     * {@code form}.
+     * any influence on it are just {@code rows}, {@code cols}, {@code disabled}
+     * and {@code form}.
      */
     public CKEditor(HttpServletRequest request, String basePath,
             String instanceName, String value,
@@ -279,7 +279,7 @@ public class CKEditor {
 
     /**
      * Represents the JavaScript {@code replace} method, however, it does not
-     * require the {@code <textarea>} tag to be available on the JSP.
+     * require the {@code <textarea>} tag to be available on JSP.
      * <p>
      * This constructor inserts the HTML {@code <textarea>} element into the
      * page and then replaces it with an editor instance.<br>
@@ -290,7 +290,7 @@ public class CKEditor {
      * @param basePath a string representing an absolute or a relative path to
      * the CKEditor installation directory.
      * @param instanceName the name or ID of the {@code <textarea>} element that
-     * is to be inserted into the JSP.
+     * is to be inserted into JSP.
      * @param value the initial HTML code for a CKEditor instance.
      * @param textareaAttributes the {@code Map} of key-value pairs representing
      * {@code <textarea>} attributes and their values. The list of attributes
@@ -298,8 +298,8 @@ public class CKEditor {
      *            href="http://www.w3schools.com/tags/tag_textarea.asp">
      * W3Schools</a> website.<br>
      * Please note, however, that attributes useful for CKEditor or that have
-     * any influence on it are {@code rows}, {@code cols}, {@code disabled} and
-     * {@code form}.
+     * any influence on it are just {@code rows}, {@code cols}, {@code disabled}
+     * and {@code form}.
      * @param config the CKEditor configuration object storing this editor
      * instance custom configuration.
      */
@@ -312,9 +312,9 @@ public class CKEditor {
 
     /**
      * Represents the JavaScript {@code replace} or {@code inline} method&#x2e;
-     * On a JSP it replaces the specified {@code <textarea>} element with a
+     * It replaces the specified {@code <textarea>} element on JSP with a
      * CKEditor instance or creates inline editor inside the
-     * {@code contenteditable} element available on a JSP.
+     * {@code contenteditable} element available on JSP.
      *
      * @param request current {@code HttpServletRequest} instance.
      * @param basePath a string representing an absolute or a relative path to
@@ -323,7 +323,7 @@ public class CKEditor {
      * method should be used to create an editor instance. Only
      * {@code CKEditor.Methods.Single} enumeration values are allowed.
      * @param instanceName the name or ID of the {@code <textarea>} or
-     * {@code contenteditable} element available on a JSP.
+     * {@code contenteditable} element available on JSP.
      */
     public CKEditor(HttpServletRequest request, String basePath,
             Methods.Single creationMethod, String instanceName) {
@@ -339,9 +339,9 @@ public class CKEditor {
 
     /**
      * Represents the JavaScript {@code replace} or {@code inline} method&#x2e;
-     * On a JSP it replaces the specified {@code <textarea>} element with a
+     * It replaces the specified {@code <textarea>} element on JSP with a
      * CKEditor instance or creates inline editor inside the
-     * {@code contenteditable} element available on a JSP.<br>
+     * {@code contenteditable} element available on JSP.<br>
      * Additionally this constructor allows for passing a customized editor
      * instance configuration.
      *
@@ -352,7 +352,7 @@ public class CKEditor {
      * method should be used to create an editor instance. Only
      * {@code CKEditor.Methods.Single} enumeration values are allowed.
      * @param instanceName the name or ID of the {@code <textarea>} or
-     * {@code contenteditable} element available on a JSP.
+     * {@code contenteditable} element available on JSP.
      * @param config the CKEditor configuration object storing this editor
      * instance custom configuration.
      */
@@ -366,7 +366,7 @@ public class CKEditor {
     /**
      * Represents the JavaScript {@code replace} or {@code inline} method,
      * however, it does not require the {@code <textarea>} tag to be available
-     * on the JSP.
+     * on JSP.
      * <p>
      * This constructor inserts the {@code <textarea>} element into the page and
      * then replaces it with an editor instance.<br>
@@ -377,7 +377,7 @@ public class CKEditor {
      * @param basePath a string representing an absolute or a relative path to
      * the CKEditor installation directory.
      * @param instanceName the name or ID of the {@code <textarea>} element to
-     * be inserted into the JSP.
+     * be inserted into JSP.
      * @param value the initial HTML code for the CKEditor instance.
      * @param textareaAttributes the {@code Map} of key-value pairs representing
      * {@code <textarea>} attributes and their values. The list of attributes
@@ -388,7 +388,7 @@ public class CKEditor {
      * any influence on it are just {@code rows}, {@code cols}, {@code disabled}
      * and {@code form}.
      * @param inline a Boolean flag indicating whether inline or classic editor
-     * should be used to replace the {@code <textarea>} on a JSP.
+     * should be used to replace the {@code <textarea>} on JSP.
      * @param config the CKEditor configuration object storing this editor
      * instance custom configuration.
      */
@@ -404,7 +404,7 @@ public class CKEditor {
     /**
      * Represents the JavaScript {@code replace} or {@code inline} method,
      * however, it does not require the {@code <textarea>} tag to be available
-     * on the JSP.<br>
+     * on JSP.<br>
      * This constructor inserts the HTML {@code <textarea>} element into the
      * page and then replaces it with an editor instance.
      *
@@ -423,7 +423,7 @@ public class CKEditor {
      * any influence on it are just {@code rows}, {@code cols}, {@code disabled}
      * and {@code form}.
      * @param inline a Boolean flag indicating whether inline or classic editor
-     * should be used to replace the {@code <textarea>} on a JSP.
+     * should be used to replace the {@code <textarea>} on JSP.
      */
     public CKEditor(HttpServletRequest request, String basePath,
             String instanceName, String value,
@@ -642,7 +642,7 @@ public class CKEditor {
      * Based on the enumeration marker provided, this method returns a string
      * representing the start of the CKEditor JavaScript creation method. This
      * string is later concatenated with the rest of the JavaScript code and
-     * inserted into the JSP.
+     * inserted into JSP.
      *
      * @return a string representing the start of the CKEditor JavaScript
      * creation method. If none of the markers matches, {@code null} is
@@ -747,7 +747,7 @@ public class CKEditor {
      * their values for the {@code <textarea>} element that will be inserted
      * into JSP and replaced by an editor instance.
      *
-     * @return the {code Map} of {@code <textarea>} attributes.
+     * @return the {@code Map} of {@code <textarea>} attributes.
      */
     public HashMap<String, String> getTextareaAttributes() {
         return textareaAttributes;
@@ -931,8 +931,8 @@ public class CKEditor {
 
     /**
      * Returns a flag informing the {@code CKEditor} object whether base
-     * parameters like the {@code ckeditor.js} script were already inserted into
-     * JSP.
+     * parameters like the {@code ckeditor.js} script have already been inserted
+     * into JSP.
      *
      * @return a Boolean flag informing whether CKEditor was initialized with
      * base parameters.
@@ -943,7 +943,7 @@ public class CKEditor {
 
     /**
      * Sets a flag informing the {@code CKEditor} object whether base parameters
-     * like the {@code ckeditor.js} script were already inserted into the JSP.
+     * like the {@code ckeditor.js} script have already been inserted into JSP.
      *
      * @param initialized a Boolean flag informing whether CKEditor was
      * initialized with base parameters.
