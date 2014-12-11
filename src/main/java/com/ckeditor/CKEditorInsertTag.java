@@ -15,12 +15,12 @@ import javax.servlet.jsp.JspWriter;
 /**
  * The {@code CKEditorInsertTag} class is used to create the JavaScript
  * {@code replace} or {@code inline} methods which replace the specified
- * {@code &lt;textarea&gt;} element on JSP. What makes this tag different from
+ * {@code <textarea>} element on JSP. What makes this tag different from
  * the {@code CKEditorReplaceTag} is that it does not need the HTML
- * {@code &lt;textarea&gt;} element to exist &mdash; the {@code &lt;textarea&gt;} is
+ * {@code <textarea>} element to exist &mdash; the {@code <textarea>} is
  * created on the fly and inserted into JSP. The creation of this element can be based
  * on properties provided as the tag attribute, but this is not required. 
- * If the user does not specify any {@code &lt;textarea&gt;} properties,
+ * If the user does not specify any {@code <textarea>} properties,
  * the {@code insert} tag will use a set of predefined properties.
  * <p>
  * <strong>Usage on JSP:</strong>
@@ -38,7 +38,7 @@ public class CKEditorInsertTag extends CKEditorTag {
 
 	/**
 	 * The name of this editor instance which matches the ID or name of the
-	 * {@code &lt;textarea&gt;} element on which the editor will be created.
+	 * {@code <textarea>} element on which the editor will be created.
 	 */
 	private String editor;
 
@@ -46,7 +46,7 @@ public class CKEditorInsertTag extends CKEditorTag {
 	private String value;
 
 	/**
-	 * Attributes for the {@code &lt;textarea&gt;} element which will be inserted into JSP
+	 * Attributes for the {@code <textarea>} element which will be inserted into JSP
 	 * and replaced by the editor.
 	 */
 	private Map<String, String> textareaAttributes;
@@ -64,10 +64,10 @@ public class CKEditorInsertTag extends CKEditorTag {
 	}
 
 	/**
-	 * Inserts HTML {@code &lt;textarea&gt;} elment into JSP. The {@code &lt;textarea&gt;}
-	 * is created based on the {@code Map} of properties ({@code &lt;textarea&gt;}
+	 * Inserts HTML {@code <textarea>} elment into JSP. The {@code <textarea>}
+	 * is created based on the {@code Map} of properties ({@code <textarea>}
 	 * attribute names and values) provided as the attribute of this tag or based on
-	 * the tag's predefined {@code Map} of properties. The {@code &lt;textarea&gt;}
+	 * the tag's predefined {@code Map} of properties. The {@code <textarea>}
 	 * element is then replaced with an editor instance.
 	 * 
 	 * @return {@code EVAL_PAGE} integer flag from the
@@ -142,11 +142,11 @@ public class CKEditorInsertTag extends CKEditorTag {
 
 	/**
 	 * Sets the name of this editor instance which matches the ID or name of the
-	 * {@code &lt;textarea&gt;} element which will be replaced by the editor.
+	 * {@code <textarea>} element which will be replaced by the editor.
 	 * 
 	 * @param editor
 	 *            the name of the editor instance which matches the ID or name of the
-	 *            {@code &lt;textarea&gt;} element.
+	 *            {@code <textarea>} element.
 	 */
 	public final void setEditor( final String editor ) {
 		this.editor = editor;
@@ -164,7 +164,7 @@ public class CKEditorInsertTag extends CKEditorTag {
 
 	/**
 	 * Sets the {@code Map} of key-value pairs representing attribute names and
-	 * values for the {@code &lt;textarea&gt;} element which will be inserted into JSP and
+	 * values for the {@code <textarea>} element which will be inserted into JSP and
 	 * replaced with the editor.
 	 * <p>
 	 * The list of the attributes can be found on the <a
@@ -176,7 +176,7 @@ public class CKEditorInsertTag extends CKEditorTag {
 	 * 
 	 * @param textareaAttr
 	 *            the {@code Map} of key-value pairs representing the
-	 *            {@code &lt;textarea&gt;} attribute names and values.
+	 *            {@code <textarea>} attribute names and values.
 	 */
 	public final void setTextareaAttributes(
 			final Map<String, String> textareaAttr ) {
@@ -196,7 +196,7 @@ public class CKEditorInsertTag extends CKEditorTag {
 
 	/**
 	 * Returns the name of this editor instance. The name matches the ID or name of the
-	 * {@code &lt;textarea&gt;} element which will be replaced by the editor.
+	 * {@code <textarea>} element which will be replaced by the editor.
 	 * 
 	 * @return the name of this editor instance.
 	 */

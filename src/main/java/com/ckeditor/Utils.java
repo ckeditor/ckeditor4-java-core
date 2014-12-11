@@ -30,10 +30,10 @@ public class Utils {
 	private static final String [] HTML_TO = { "&amp;", "&quot;", "&lt;",
 			"&gt;" };
 
-	/** Default number of {@code &lt;textarea&gt;} rows. */
+	/** Default number of {@code <textarea>} rows. */
 	private static final String DEFAULT_TEXTAREA_ROWS = "8";
 
-	/** Default number of {@code &lt;textarea&gt;} columns. */
+	/** Default number of {@code <textarea>} columns. */
 	private static final String DEFAULT_TEXTAREA_COLS = "60";
 
 	/**
@@ -243,23 +243,23 @@ public class Utils {
 	}
 
 	/**
-	 * Creates a string representing the HTML {@code &lt;textarea&gt;} element which
+	 * Creates a string representing the HTML {@code <textarea>} element which
 	 * is to be inserted into JSP.
 	 * 
 	 * @param textAreaName
-	 *            a {@code String} representing the name and ID of the {@code &lt;textarea&gt;}
+	 *            a {@code String} representing the name and ID of the {@code <textarea>}
 	 *            element that will be inserted into JSP and used to replace it with an editor instance.
 	 * 
 	 * @param htmlValue
-	 *            a {@code String} representing the HTML value for the {@code &lt;textarea&gt;} element.
+	 *            a {@code String} representing the HTML value for the {@code <textarea>} element.
 	 *            This HTML will be later used as the initial value for the editor which
-	 *            will be created on the {@code &lt;textarea&gt;} element.
+	 *            will be created on the {@code <textarea>} element.
 	 * 
 	 * @param textareaAttributes
-	 *            The @{code Map} representing attributes for the {@code &lt;textarea&gt;} element
+	 *            The @{code Map} representing attributes for the {@code <textarea>} element
 	 *            that will be inserted into JSP and replaced by an editor instance.
 	 * 
-	 * @return a string representing the HTML {@code &lt;textarea&gt;} element.
+	 * @return a string representing the HTML {@code <textarea>} element.
 	 */
 	public static String createTextareaTag( final String textAreaName,
 			String htmlValue, Map<String, String> textareaAttributes ) {
@@ -278,14 +278,14 @@ public class Utils {
 	}
 
 	/**
-	 * Returns a {@code String} representing the {@code &lt;textarea&gt;} element attributes. If no attributes
+	 * Returns a {@code String} representing the {@code <textarea>} element attributes. If no attributes
 	 * are provided as a parameter, a predefined set of attributes will be used.
 	 * 
 	 * @param textareaAttributes
-	 *            A {@code Map} representing attributes for the {@code &lt;textarea&gt;} element
+	 *            A {@code Map} representing attributes for the {@code <textarea>} element
 	 *            that will be inserted into JSP and replaced by an editor instance.
 	 * 
-	 * @return a string representing the {@code &lt;textarea&gt;} element attributes.
+	 * @return a string representing the {@code <textarea>} element attributes.
 	 */
 	private static String createTextareaAttributesText(
 			Map<String, String> textareaAttributes ) {

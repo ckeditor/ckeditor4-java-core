@@ -6,8 +6,8 @@ package com.ckeditor;
 
 /**
  * The {@code CKEditorReplaceAllTag} class is used to create the JavaScript
- * {@code replaceAll} method which replaces either all {@code &lt;textarea&gt;}
- * elements on JSP or all {@code &lt;textarea&gt;} elements whose CSS class
+ * {@code replaceAll} method which replaces either all {@code <textarea>}
+ * elements on JSP or all {@code <textarea>} elements whose CSS class
  * matches the class name provided as one of the attributes of this tag.
  * <p>
  * <strong>Usage on JSP:</strong>
@@ -26,7 +26,7 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
 	private static final long serialVersionUID = -7331873466295495480L;
 
 	/**
-	 * The CSS class used to identify {@code &lt;textarea&gt;} elements on JSP
+	 * The CSS class used to identify {@code <textarea>} elements on JSP
 	 * which will be replaced by editor instances.
 	 */
 	private String className;
@@ -40,8 +40,8 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
 
 	/**
 	 * Creates the JavaScript {@code replaceAll} creation method which replaces
-	 * either all {@code &lt;textarea&gt;} elements on JSP or all
-	 * {@code &lt;textarea&gt;} elements whose CSS class matches the class name
+	 * either all {@code <textarea>} elements on JSP or all
+	 * {@code <textarea>} elements whose CSS class matches the class name
 	 * provided as an attribute of this tag.<br>
 	 * Additionally, provided that the configuration object passed as parameter
 	 * is not {@code null}, this method also creates the JavaScript code that
@@ -85,11 +85,11 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
 	}
 
 	/**
-	 * Sets the CSS class used to identify {@code &lt;textarea&gt;} elements
+	 * Sets the CSS class used to identify {@code <textarea>} elements
 	 * that will be replaced by CKEditor instances.
 	 * 
 	 * @param className
-	 *            the CSS class name that identifies {@code &lt;textarea&gt;}
+	 *            the CSS class name that identifies {@code <textarea>}
 	 *            elements to replace on JSP.
 	 */
 	public final void setClassName( final String className ) {
@@ -99,7 +99,7 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
 	/**
 	 * This method should return the name of the editor instance but since this
 	 * tag represents the {@code replaceAll} JavaScript method which replaces
-	 * all {@code &lt;textarea&gt;} elements (or all {@code &lt;textarea&gt;} elements
+	 * all {@code <textarea>} elements (or all {@code <textarea>} elements
 	 * with the specified CSS class name) found on JSP with CKEditor instances,
 	 * it is not possible to return a particular CKEditor instance name.
 	 * As a result {@code null} is returned.

@@ -6,8 +6,8 @@ package com.ckeditor;
 
 /**
  * The {@code CKEditorReplaceTag} class is used to create the JavaScript
- * {@code replace} method which replaces the specified {@code &lt;textarea&gt;}
- * element on JSP. This {@code &lt;textarea&gt;} is identifiable by the ID or
+ * {@code replace} method which replaces the specified {@code <textarea>}
+ * element on JSP. This {@code <textarea>} is identifiable by the ID or
  * name which is passed as one of the attributes of this tag.
  * <p>
  * <strong>Usage on JSP:</strong>
@@ -24,7 +24,7 @@ public class CKEditorReplaceTag extends CKEditorTag {
 
 	/**
 	 * The name of this editor instance which matches the ID or name of the
-	 * {@code &lt;textarea&gt;} element which will be replaced by the editor.
+	 * {@code <textarea>} element which will be replaced by the editor.
 	 */
 	private String replace;
 
@@ -62,12 +62,12 @@ public class CKEditorReplaceTag extends CKEditorTag {
 
 	/**
 	 * Sets the name of this editor instance. The name matches the ID or name of
-	 * the {@code &lt;textarea&gt;} which will be replaced by an editor
+	 * the {@code <textarea>} which will be replaced by an editor
 	 * instance.
 	 * 
 	 * @param replace
 	 *            the name of the editor instance which matches the ID or name
-	 *            of the {@code &lt;textarea&gt;} element.
+	 *            of the {@code <textarea>} element.
 	 */
 	public final void setReplace( final String replace ) {
 		this.replace = replace;
@@ -75,7 +75,7 @@ public class CKEditorReplaceTag extends CKEditorTag {
 
 	/**
 	 * Returns the name of this editor instance. The name matches the ID or name
-	 * of the {@code &lt;textarea&gt;} element which will be replaced by an
+	 * of the {@code <textarea>} element which will be replaced by an
 	 * editor instance.
 	 * 
 	 * @return the name of this editor instance.

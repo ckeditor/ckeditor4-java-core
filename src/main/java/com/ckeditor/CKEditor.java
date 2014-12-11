@@ -70,7 +70,7 @@ public class CKEditor {
 	}
 
 	/**
-	 * Attributes for the {@code &lt;textarea&gt;} element that will be inserted
+	 * Attributes for the {@code <textarea>} element that will be inserted
 	 * into JSP and replaced with CKEditor.
 	 */
 	private HashMap<String, String> textareaAttributes;
@@ -88,7 +88,7 @@ public class CKEditor {
 	private boolean initialized;
 
 	/**
-	 * Name of a CSS marker class used to identify {@code &lt;textarea&gt;}
+	 * Name of a CSS marker class used to identify {@code <textarea>}
 	 * elements which will be replaced by editor instances.
 	 */
 	private String className;
@@ -108,7 +108,7 @@ public class CKEditor {
 	/** Current request object. */
 	private HttpServletRequest request;
 
-	/** Name or ID of the {@code &lt;textarea&gt;} element. */
+	/** Name or ID of the {@code <textarea>} element. */
 	private String instanceName;
 
 	/**
@@ -147,7 +147,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replaceAll} method&#x2e; It replaces all
-	 * {@code &lt;textarea&gt;} elements on JSP with CKEditor instances.
+	 * {@code <textarea>} elements on JSP with CKEditor instances.
 	 * 
 	 * @param request
 	 *            current {@code HttpServletRequest} instance.
@@ -162,7 +162,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replaceAll} method&#x2e; On a JSP it
-	 * replaces all {@code &lt;textarea&gt;} elements whose CSS class matches
+	 * replaces all {@code <textarea>} elements whose CSS class matches
 	 * the class name provided as an argument to this constructor with CKEditor
 	 * instances.
 	 * 
@@ -173,7 +173,7 @@ public class CKEditor {
 	 *            CKEditor installation directory.
 	 * @param className
 	 *            the name of the CSS marker class used to identify
-	 *            {@code &lt;textarea&gt;} elements on which the editor should
+	 *            {@code <textarea>} elements on which the editor should
 	 *            be created.
 	 */
 	public CKEditor ( HttpServletRequest request, String basePath,
@@ -184,7 +184,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replaceAll} method&#x2e; On a JSP it
-	 * replaces all {@code &lt;textarea&gt;} elements whose CSS class matches
+	 * replaces all {@code <textarea>} elements whose CSS class matches
 	 * the class name provided as an argument to this constructor with CKEditor
 	 * instances.<br>
 	 * Additionally this constructor allows for passing customized editor
@@ -197,7 +197,7 @@ public class CKEditor {
 	 *            installation directory.
 	 * @param className
 	 *            the name of the CSS marker class used to identify
-	 *            {@code &lt;textarea&gt;} elements on which the editor should
+	 *            {@code <textarea>} elements on which the editor should
 	 *            be created.
 	 * @param config
 	 *            the CKEditor configuration object storing this editor instance
@@ -211,7 +211,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replaceAll} or {@code inlineAll}
-	 * method&#x2e; On a JSP it replaces all {@code &lt;textarea&gt;}
+	 * method&#x2e; On a JSP it replaces all {@code <textarea>}
 	 * elements with CKEditor instances or creates inline editors inside all
 	 * {@code contenteditable} elements available on a JSP.
 	 * 
@@ -237,9 +237,9 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} method, however, it does not
-	 * require the {@code &lt;textarea&gt;} tag to be available on the JSP.
+	 * require the {@code <textarea>} tag to be available on the JSP.
 	 * <p>
-	 * This constructor inserts the HTML {@code &lt;textarea&gt;} element into
+	 * This constructor inserts the HTML {@code <textarea>} element into
 	 * the page and then replaces it with an editor instance.
 	 * 
 	 * @param request
@@ -248,13 +248,13 @@ public class CKEditor {
 	 *            a string representing an absolute or a relative path to the
 	 *            CKEditor installation directory.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} element that is
+	 *            the name or ID of the {@code <textarea>} element that is
 	 *            to be inserted into the JSP.
 	 * @param value
 	 *            the initial HTML code for a CKEditor instance.
 	 * @param textareaAttributes
 	 *            the {@code Map} of key-value pairs representing
-	 *            {@code &lt;textarea&gt;} attributes and their values. The list
+	 *            {@code <textarea>} attributes and their values. The list
 	 *            of attributes can be found on the <a
 	 *            href="http://www.w3schools.com/tags/tag_textarea.asp">
 	 *            W3Schools</a> website.<br>
@@ -274,9 +274,9 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} method, however, it does not
-	 * require the {@code &lt;textarea&gt;} tag to be available on the JSP.
+	 * require the {@code <textarea>} tag to be available on the JSP.
 	 * <p>
-	 * This constructor inserts the HTML {@code &lt;textarea&gt;} element into
+	 * This constructor inserts the HTML {@code <textarea>} element into
 	 * the page and then replaces it with an editor instance.<br>
 	 * Additionally, this constructor allows for passing a customized editor
 	 * instance configuration.
@@ -287,13 +287,13 @@ public class CKEditor {
 	 *            a string representing an absolute or a relative path to the
 	 *            CKEditor installation directory.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} element that is
+	 *            the name or ID of the {@code <textarea>} element that is
 	 *            to be inserted into the JSP.
 	 * @param value
 	 *            the initial HTML code for a CKEditor instance.
 	 * @param textareaAttributes
 	 *            the {@code Map} of key-value pairs representing
-	 *            {@code &lt;textarea&gt;} attributes and their values. The list
+	 *            {@code <textarea>} attributes and their values. The list
 	 *            of attributes can be found on the <a
 	 *            href="http://www.w3schools.com/tags/tag_textarea.asp">
 	 *            W3Schools</a> website.<br>
@@ -313,7 +313,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} or {@code inline} method&#x2e;
-	 * On a JSP it replaces the specified {@code &lt;textarea&gt;} element with
+	 * On a JSP it replaces the specified {@code <textarea>} element with
 	 * a CKEditor instance or creates inline editor inside the {@code contenteditable}
 	 * element available on a JSP.
 	 * 
@@ -328,7 +328,7 @@ public class CKEditor {
 	 *            {@code CKEditor.Methods.Single} enumeration values are
 	 *            allowed.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} or
+	 *            the name or ID of the {@code <textarea>} or
 	 *            {@code contenteditable} element available on a JSP.
 	 */
 	public CKEditor ( HttpServletRequest request, String basePath,
@@ -344,7 +344,7 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} or {@code inline} method&#x2e;
-	 * On a JSP it replaces the specified {@code &lt;textarea&gt;} element with
+	 * On a JSP it replaces the specified {@code <textarea>} element with
 	 * a CKEditor instance or creates inline editor inside the {@code contenteditable}
 	 * element available on a JSP.<br>
 	 * Additionally this constructor allows for passing a customized editor
@@ -361,7 +361,7 @@ public class CKEditor {
 	 *            {@code CKEditor.Methods.Single} enumeration values are
 	 *            allowed.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} or
+	 *            the name or ID of the {@code <textarea>} or
 	 *            {@code contenteditable} element available on a JSP.
 	 * @param config
 	 *            the CKEditor configuration object storing this editor instance
@@ -376,10 +376,10 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} or {@code inline} method,
-	 * however, it does not require the {@code &lt;textarea&gt;} tag to be
+	 * however, it does not require the {@code <textarea>} tag to be
 	 * available on the JSP.
 	 * <p>
-	 * This constructor inserts the {@code &lt;textarea&gt;} element into the
+	 * This constructor inserts the {@code <textarea>} element into the
 	 * page and then replaces it with an editor instance.<br>
 	 * Additionally, this constructor allows for passing a customized editor
 	 * instance configuration.
@@ -390,13 +390,13 @@ public class CKEditor {
 	 *            a string representing an absolute or a relative path to the
 	 *            CKEditor installation directory.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} element to be
+	 *            the name or ID of the {@code <textarea>} element to be
 	 *            inserted into the JSP.
 	 * @param value
 	 *            the initial HTML code for the CKEditor instance.
 	 * @param textareaAttributes
 	 *            the {@code Map} of key-value pairs representing
-	 *            {@code &lt;textarea&gt;} attributes and their values. The list
+	 *            {@code <textarea>} attributes and their values. The list
 	 *            of attributes can be found on the <a
 	 *            href="http://www.w3schools.com/tags/tag_textarea.asp">
 	 *            W3Schools</a> website.<br>
@@ -405,7 +405,7 @@ public class CKEditor {
 	 *            {@code cols}, {@code disabled} and {@code form}.
 	 * @param inline
 	 *            a Boolean flag indicating whether inline or classic editor
-	 *            should be used to replace the {@code &lt;textarea&gt;} on a
+	 *            should be used to replace the {@code <textarea>} on a
 	 *            JSP.
 	 * @param config
 	 *            the CKEditor configuration object storing this editor instance
@@ -422,9 +422,9 @@ public class CKEditor {
 
 	/**
 	 * Represents the JavaScript {@code replace} or {@code inline} method,
-	 * however, it does not require the {@code &lt;textarea&gt;} tag to be
+	 * however, it does not require the {@code <textarea>} tag to be
 	 * available on the JSP.<br>
-	 * This constructor inserts the HTML {@code &lt;textarea&gt;} element into
+	 * This constructor inserts the HTML {@code <textarea>} element into
 	 * the page and then replaces it with an editor instance.
 	 * 
 	 * @param request
@@ -433,13 +433,13 @@ public class CKEditor {
 	 *            a string representing an absolute or a relative path to the
 	 *            CKEditor installation directory.
 	 * @param instanceName
-	 *            the name or ID of the {@code &lt;textarea&gt;} element to be
+	 *            the name or ID of the {@code <textarea>} element to be
 	 *            inserted into JSP.
 	 * @param value
 	 *            the initial HTML code for a CKEditor instance.
 	 * @param textareaAttributes
 	 *            the {@code Map} of key-value pairs representing
-	 *            {@code &lt;textarea&gt;} attributes and their values. The list
+	 *            {@code <textarea>} attributes and their values. The list
 	 *            of attributes can be found on the <a
 	 *            href="http://www.w3schools.com/tags/tag_textarea.asp">
 	 *            W3Schools</a> website.<br>
@@ -448,7 +448,7 @@ public class CKEditor {
 	 *            {@code cols}, {@code disabled} and {@code form}.
 	 * @param inline
 	 *            a Boolean flag indicating whether inline or classic editor
-	 *            should be used to replace the {@code &lt;textarea&gt;} on a
+	 *            should be used to replace the {@code <textarea>} on a
 	 *            JSP.
 	 */
 	public CKEditor ( HttpServletRequest request, String basePath,
@@ -717,7 +717,7 @@ public class CKEditor {
 
 	/**
 	 * Returns the name of the CSS marker class used to identify
-	 * {@code &lt;textarea&gt;} elements which will be replaced by editor
+	 * {@code <textarea>} elements which will be replaced by editor
 	 * instances.
 	 * 
 	 * @return a string representing the class name.
@@ -728,7 +728,7 @@ public class CKEditor {
 
 	/**
 	 * Sets the name of the CSS marker class used to identify
-	 * {@code &lt;textarea&gt;} elements which will be replaced by editor
+	 * {@code <textarea>} elements which will be replaced by editor
 	 * instances.
 	 * 
 	 * @param className
@@ -764,10 +764,10 @@ public class CKEditor {
 
 	/**
 	 * Returns the {@code Map} of key-value pairs representing attributes and
-	 * their values for the {@code &lt;textarea&gt;} element that will be
+	 * their values for the {@code <textarea>} element that will be
 	 * inserted into JSP and replaced by an editor instance.
 	 * 
-	 * @return the {code Map} of {@code &lt;textarea&gt;} attributes.
+	 * @return the {code Map} of {@code <textarea>} attributes.
 	 */
 	public HashMap<String, String> getTextareaAttributes( ) {
 		return textareaAttributes;
@@ -775,7 +775,7 @@ public class CKEditor {
 
 	/**
 	 * Sets the {@code Map} of key-value pairs representing attributes and their
-	 * values for the {@code &lt;textarea&gt;} element that will be inserted
+	 * values for the {@code <textarea>} element that will be inserted
 	 * into JSP and replaced by an editor instance.
 	 * <p>
 	 * The list of attributes can be found on the <a
@@ -786,7 +786,7 @@ public class CKEditor {
 	 * and {@code form}.
 	 * 
 	 * @param textareaAttributes
-	 *            the {@code Map} of {@code &lt;textarea&gt;} attributes.
+	 *            the {@code Map} of {@code <textarea>} attributes.
 	 */
 	public void setTextareaAttributes(
 			HashMap<String, String> textareaAttributes ) {
@@ -817,7 +817,7 @@ public class CKEditor {
 
 	/**
 	 * Returns the name of this editor instance. The name matches the name or ID
-	 * of the {@code &lt;textarea&gt;} element which will be replaced by an editor
+	 * of the {@code <textarea>} element which will be replaced by an editor
 	 * instance.
 	 * 
 	 * @return a string representing the editor instance name.
@@ -828,7 +828,7 @@ public class CKEditor {
 
 	/**
 	 * Sets the name of this editor instance. The name matches the name or ID of
-	 * the {@code &lt;textarea&gt;} element which will be replaced by an editor
+	 * the {@code <textarea>} element which will be replaced by an editor
 	 * instance.
 	 * 
 	 * @param instanceName
