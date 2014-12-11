@@ -28,13 +28,15 @@ Integrating CKEditor for Java with your web application can be done in three dif
 ### Maven
  
  1. If you use Maven,you can get CKEditor for Java by placing the code below inside your `pom.xml` file:
- 	
- 		<dependency>
-			<groupId>com.ckeditor</groupId>
-			<artifactId>ckeditor-java-core</artifactId>
-			<version>4.0</version>		
-		</dependency> 
- 	
+ 
+ ```xml
+ 	<dependency>
+		<groupId>com.ckeditor</groupId>
+		<artifactId>ckeditor-java-core</artifactId>
+		<version>4.0</version>		
+	</dependency> 
+ ```
+ 
 ### Sample Application
  
   1. **Download** the sample application from http://link-to-sample-app.com.
