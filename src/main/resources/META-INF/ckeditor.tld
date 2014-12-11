@@ -1,429 +1,428 @@
 <?xml version="1.0"?>
 <taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd">
-	<description> The CKEditor Tag Library offers a convenient way to
-		create several CKEditor instances with different configurations.
-		Additionally, you can check for user-based capabilities.
-	</description>
-	<display-name>CKEditor for Java Tag Library</display-name>
-	<tlib-version>4.4.3</tlib-version>
-	<short-name>ckeditor</short-name>
-	<uri>http://ckeditor.com</uri>
-	<tag>
-		<display-name>replace</display-name>
-		<name>replace</name>
-		<tag-class>com.ckeditor.CKEditorReplaceTag</tag-class>
-		<body-content>empty</body-content>
-		<description>
-			Replaces the provided textarea element with classic editor.
-		</description>
-		<example>
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd">
+    <description> The CKEditor Tag Library offers a convenient way to
+        create several CKEditor instances with different configurations.
+    </description>
+    <display-name>CKEditor for Java Tag Library</display-name>
+    <tlib-version>4.0</tlib-version>
+    <short-name>ckeditor</short-name>
+    <uri>http://ckeditor.com</uri>
+    <tag>
+        <display-name>replace</display-name>
+        <name>replace</name>
+        <tag-class>com.ckeditor.CKEditorReplaceTag</tag-class>
+        <body-content>empty</body-content>
+        <description>
+            Replaces the provided textarea element with classic editor.
+        </description>
+        <example>
 			&lt;ckeditor:replace replace="editor1" basePath="ckeditor/"/&gt;
-		</example>
-		<attribute>
-			<description>
-				Path to the CKEditor directory.
-			</description>
-			<name>basePath</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				The name of the HTML textarea element that is to be replaced with CKEditor.
-			</description>
-			<name>replace</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description> 
-				A random set of numbers and/or letters used to work
-				around browser caching. It is useful after the CKEditor client-side
-				update. Once it is defined it will be attached to the request for
-				the ckeditor.js file, making the browser download new client-side resources.
-			</description>
-			<name>timestamp</name>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description> 
-				Initialization flag for ckeditor.js. Setting this
-				parameter to "true" means that the ckeditor.js script from CKEditor is
-				already included in the page and there is no need to add it again.
-				Setting it to "false", on the other hand, means that the ckeditor.js
-				script should be added to the page.
-			</description>
-			<name>initialized</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>boolean</type>
-		</attribute>
-		<attribute>
-			<description> 
-				CKEditor configuration. Example: CKEditorConfig config2
-				= new CKEditorConfig(); config2.addConfigValue("toolbar","[[
-				'Source', '-', 'Bold', 'Italic' ]]");
-			</description>
-			<name>config</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.CKEditorConfig</type>
-		</attribute>
-		<attribute>
-			<description> 
-				CKEditor events. Example: EventHandler eventHandler =
-				new EventHandler();
-				eventHandler.addEventHandler("instanceReady","function (ev) {
-				alert(\"Loaded: \" + ev.editor.name); }");
-			</description>
-			<name>events</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.EventHandler</type>
-		</attribute>
-		<attribute>
-			<description>
-				Global CKEditor events. Example: GlobalEventHandler
-				globalEventHandler = new GlobalEventHandler();
-				globalEventHandler.addEventHandler("dialogDefinition","function (ev)
-				{ alert(\"Loading dialog window: \" + ev.data.name); }");
-			</description>
-			<name>globalEvents</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.GlobalEventHandler</type>
-		</attribute>
-	</tag>
-	<tag>
-		<display-name>editor</display-name>
-		<name>editor</name>
-		<tag-class>com.ckeditor.CKEditorInsertTag</tag-class>
-		<body-content>empty</body-content>
-		<description>
-			Inserts a textarea element into JSP and replaces it with classic or inline editor.
-		</description>
-		<example> 
+        </example>
+        <attribute>
+            <description>
+                The path to the CKEditor directory.
+            </description>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The name of the HTML textarea element that is to be replaced with CKEditor.
+            </description>
+            <name>replace</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description> 
+                A random set of numbers and/or letters used to work
+                around browser caching. It is useful after the CKEditor client-side
+                update. Once it is defined it will be attached to the request for
+                the ckeditor.js file, making the browser download new client-side resources.
+            </description>
+            <name>timestamp</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description> 
+                Initialization flag for ckeditor.js. Setting this
+                parameter to "true" means that the ckeditor.js script from CKEditor is
+                already included in the page and there is no need to add it again.
+                Setting it to "false", on the other hand, means that the ckeditor.js
+                script should be added to the page.
+            </description>
+            <name>initialized</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <description> 
+                CKEditor configuration. Example: CKEditorConfig config2
+                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                'Source', '-', 'Bold', 'Italic' ]]");
+            </description>
+            <name>config</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.CKEditorConfig</type>
+        </attribute>
+        <attribute>
+            <description> 
+                CKEditor events. Example: EventHandler eventHandler =
+                new EventHandler();
+                eventHandler.addEventHandler("instanceReady","function (ev) {
+                alert(\"Loaded: \" + ev.editor.name); }");
+            </description>
+            <name>events</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.EventHandler</type>
+        </attribute>
+        <attribute>
+            <description>
+                Global CKEditor events. Example: GlobalEventHandler
+                globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function (ev)
+                { alert(\"Loading dialog window: \" + ev.data.name); }");
+            </description>
+            <name>globalEvents</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.GlobalEventHandler</type>
+        </attribute>
+    </tag>
+    <tag>
+        <display-name>editor</display-name>
+        <name>editor</name>
+        <tag-class>com.ckeditor.CKEditorInsertTag</tag-class>
+        <body-content>empty</body-content>
+        <description>
+            Inserts a textarea element into JSP and replaces it with classic or inline editor.
+        </description>
+        <example> 
 			&lt;ckeditor:editor basePath="../../ckeditor/"
-			editor="editor1" value="This is CKEditor." /&gt;
-		</example>
-		<attribute>
-			<description>
-				Path to the CKEditor directory.
-			</description>
-			<name>basePath</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description> 
-				The name of the textarea element that is to be inserted into JSP and replaced 
-				with a CKEditor instance.
-			</description>
-			<name>editor</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Default CKEditor text value.
-			</description>
-			<name>value</name>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Attributes of the textarea element to be inserted into JSP. Example:
-				Map&lt;String, String&gt; attr = new HashMap&lt;String,
-				String&gt;(); attr.put("rows", "8"); attr.put("cols", "50");
-			</description>
-			<name>textareaAttributes</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>java.util.Map</type>
-		</attribute>
-		<attribute>
-			<description>
-				A random set of numbers and/or letters used to work
-				around browser caching. It is useful after the CKEditor client-side
-				update. Once it is defined it will be attached to the request for
-				the ckeditor.js file, making the browser download new client-side resources.
-			</description>
-			<name>timestamp</name>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Initialization flag for ckeditor.js. Setting this
-				parameter to "true" means that the ckeditor.js script from CKEditor is
-				already included in the page and there is no need to add it again.
-				Setting it to "false", on the other hand, means that the ckeditor.js
-				script should be added to the page.
-			</description>
-			<name>initialized</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>boolean</type>
-		</attribute>
-		<attribute>
-			<description>
-				CKEditor configuration. Example: CKEditorConfig config2
-				= new CKEditorConfig(); config2.addConfigValue("toolbar","[[
-				'Source', '-', 'Bold', 'Italic' ]]");
-			</description>
-			<name>config</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.CKEditorConfig</type>
-		</attribute>
-		<attribute>
-			<description> 
-				CKEditor events. Example: EventHandler eventHandler =
-				new EventHandler();
-				eventHandler.addEventHandler("instanceReady","function (ev) {
-				alert(\"Loaded: \" + ev.editor.name); }");
-			</description>
-			<name>events</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.EventHandler</type>
-		</attribute>
-		<attribute>
-			<description>
-				Global CKEditor events. Example: GlobalEventHandler
-				globalEventHandler = new GlobalEventHandler();
-				globalEventHandler.addEventHandler("dialogDefinition","function (ev)
-				{ alert(\"Loading dialog window: \" + ev.data.name); }");
-			</description>
-			<name>globalEvents</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.GlobalEventHandler</type>
-		</attribute>
-		<attribute>
-			<description>						 
-				In CKEditor 4.x it is possible to replace a textarea element with classic as well as 
-				inline editor. If this attribute if set to "true", inline editor will replace the textarea. 
-				If it is set to "false", classic editor will be created instead. Default value is "false".
-			</description>
-			<name>inline</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>boolean</type>
-		</attribute>		
-	</tag>
-	<tag>
-		<display-name>replaceAll</display-name>
-		<name>replaceAll</name>
-		<tag-class>com.ckeditor.CKEditorReplaceAllTag</tag-class>
-		<body-content>empty</body-content>
-		<description>
-			Replaces all textarea elements on JSP with classic editor.
-		</description>
-		<attribute>
-			<description>
-				Path to the CKEditor directory.
-			</description>
-			<name>basePath</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				CSS class name for the textarea elements to be replaced.
-			</description>
-			<name>className</name>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				A random set of numbers and/or letters used to work
-				around browser caching. It is useful after the CKEditor client-side
-				update. Once it is defined it will be attached to the request for
-				the ckeditor.js file, making the browser download new client-side resources.
-			</description>
-			<name>timestamp</name>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Initialization flag for ckeditor.js. Setting this
-				parameter to "true" means that the ckeditor.js script from CKEditor is
-				already included in the page and there is no need to add it again.
-				Setting it to "false", on the other hand, means that the ckeditor.js
-				script should be added to the page.
-			</description>
-			<name>initialized</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>boolean</type>
-		</attribute>
-		<attribute>
-			<description>
-				CKEditor configuration. Example: CKEditorConfig config2
-				= new CKEditorConfig(); config2.addConfigValue("toolbar","[[
-				'Source', '-', 'Bold', 'Italic' ]]");
-			</description>
-			<name>config</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.CKEditorConfig</type>
-		</attribute>
-		<attribute>
-			<description>
-				CKEditor events. Example: EventHandler eventHandler =
-				new EventHandler();
-				eventHandler.addEventHandler("instanceReady","function (ev) {
-				alert(\"Loaded: \" + ev.editor.name); }");
-			</description>
-			<name>events</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.EventHandler</type>
-		</attribute>
-		<attribute>
-			<description>
-				Global CKEditor events. Example: GlobalEventHandler
-				globalEventHandler = new GlobalEventHandler();
-				globalEventHandler.addEventHandler("dialogDefinition","function (ev)
-				{ alert(\"Loading dialog window: \" + ev.data.name); }");
-			</description>
-			<name>globalEvents</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.GlobalEventHandler</type>
-		</attribute>
-	</tag>
-	<tag>
-		<display-name>inline</display-name>
-		<name>inline</name>
-		<tag-class>com.ckeditor.CKEditorInlineTag</tag-class>
-		<body-content>empty</body-content>
-		<description>
-			Builds inline editor inside the provided contenteditable element or 
-			replaces the provided textarea element with an inline editor instance.			
-		</description>
-		<example>
+            editor="editor1" value="This is CKEditor." /&gt;
+        </example>
+        <attribute>
+            <description>
+                The path to the CKEditor directory.
+            </description>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description> 
+                The name of the textarea element that is to be inserted into JSP and replaced 
+                with a CKEditor instance.
+            </description>
+            <name>editor</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The default CKEditor text value.
+            </description>
+            <name>value</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Attributes of the textarea element that is to be inserted into JSP. Example:
+                Map&lt;String, String&gt; attr = new HashMap&lt;String,
+                String&gt;(); attr.put("rows", "8"); attr.put("cols", "50");
+            </description>
+            <name>textareaAttributes</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.Map</type>
+        </attribute>
+        <attribute>
+            <description>
+                A random set of numbers and/or letters used to work
+                around browser caching. It is useful after the CKEditor client-side
+                update. Once it is defined it will be attached to the request for
+                the ckeditor.js file, making the browser download new client-side resources.
+            </description>
+            <name>timestamp</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Initialization flag for ckeditor.js. Setting this
+                parameter to "true" means that the ckeditor.js script from CKEditor is
+                already included in the page and there is no need to add it again.
+                Setting it to "false", on the other hand, means that the ckeditor.js
+                script should be added to the page.
+            </description>
+            <name>initialized</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <description>
+                CKEditor configuration. Example: CKEditorConfig config2
+                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                'Source', '-', 'Bold', 'Italic' ]]");
+            </description>
+            <name>config</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.CKEditorConfig</type>
+        </attribute>
+        <attribute>
+            <description> 
+                CKEditor events. Example: EventHandler eventHandler =
+                new EventHandler();
+                eventHandler.addEventHandler("instanceReady","function (ev) {
+                alert(\"Loaded: \" + ev.editor.name); }");
+            </description>
+            <name>events</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.EventHandler</type>
+        </attribute>
+        <attribute>
+            <description>
+                Global CKEditor events. Example: GlobalEventHandler
+                globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function (ev)
+                { alert(\"Loading dialog window: \" + ev.data.name); }");
+            </description>
+            <name>globalEvents</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.GlobalEventHandler</type>
+        </attribute>
+        <attribute>
+            <description>						 
+                In CKEditor 4.x it is possible to replace a textarea element with classic or 
+                inline editor. If this attribute if set to "true", inline editor will replace the textarea. 
+                If it is set to "false", classic editor will be created instead. Default value is "false".
+            </description>
+            <name>inline</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>		
+    </tag>
+    <tag>
+        <display-name>replaceAll</display-name>
+        <name>replaceAll</name>
+        <tag-class>com.ckeditor.CKEditorReplaceAllTag</tag-class>
+        <body-content>empty</body-content>
+        <description>
+            Replaces all textarea elements on JSP with classic editor.
+        </description>
+        <attribute>
+            <description>
+                The path to the CKEditor directory.
+            </description>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                CSS class name for the textarea elements to be replaced.
+            </description>
+            <name>className</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                A random set of numbers and/or letters used to work
+                around browser caching. It is useful after the CKEditor client-side
+                update. Once it is defined it will be attached to the request for
+                the ckeditor.js file, making the browser download new client-side resources.
+            </description>
+            <name>timestamp</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Initialization flag for ckeditor.js. Setting this
+                parameter to "true" means that the ckeditor.js script from CKEditor is
+                already included in the page and there is no need to add it again.
+                Setting it to "false", on the other hand, means that the ckeditor.js
+                script should be added to the page.
+            </description>
+            <name>initialized</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <description>
+                CKEditor configuration. Example: CKEditorConfig config2
+                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                'Source', '-', 'Bold', 'Italic' ]]");
+            </description>
+            <name>config</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.CKEditorConfig</type>
+        </attribute>
+        <attribute>
+            <description>
+                CKEditor events. Example: EventHandler eventHandler =
+                new EventHandler();
+                eventHandler.addEventHandler("instanceReady","function (ev) {
+                alert(\"Loaded: \" + ev.editor.name); }");
+            </description>
+            <name>events</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.EventHandler</type>
+        </attribute>
+        <attribute>
+            <description>
+                Global CKEditor events. Example: GlobalEventHandler
+                globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function (ev)
+                { alert(\"Loading dialog window: \" + ev.data.name); }");
+            </description>
+            <name>globalEvents</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.GlobalEventHandler</type>
+        </attribute>
+    </tag>
+    <tag>
+        <display-name>inline</display-name>
+        <name>inline</name>
+        <tag-class>com.ckeditor.CKEditorInlineTag</tag-class>
+        <body-content>empty</body-content>
+        <description>
+            Builds inline editor inside the provided contenteditable element or 
+            replaces the provided textarea element with an inline editor instance.			
+        </description>
+        <example>
 			&lt;ckeditor:inline inline="editable" basePath="ckeditor/"/&gt;
-		</example>
-		<attribute>
-			<description>
-				Path to the CKEditor directory.
-			</description>
-			<name>basePath</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				The name of the HTML textarea element which will be replaced by an 
-				editor instance or the ID attribute of the editable HTML element 
-				inside which the editor will be created.
-			</description>
-			<name>inline</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				A random set of numbers and/or letters used to work
-				around browser caching. It is useful after the CKEditor client-side
-				update. Once it is defined it will be attached to the request for
-				the ckeditor.js file, making the browser download new client-side resources.
-			</description>
-			<name>timestamp</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Initialization flag for ckeditor.js. Setting this
-				parameter to "true" means that the ckeditor.js script from CKEditor is
-				already included in the page and there is no need to add it again.
-				Setting it to "false", on the other hand, means that the ckeditor.js
-				script should be added to the page.
-			</description>
-			<name>initialized</name>
-			<rtexprvalue>true</rtexprvalue>
-			<required>false</required>
-			<type>boolean</type>
-		</attribute>
-		<attribute>
-			<description> 
-				CKEditor configuration. Example: 
-				CKEditorConfig config2 = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
-				'Source', '-', 'Bold', 'Italic' ]]");
-			</description>
-			<name>config</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.CKEditorConfig</type>
-		</attribute>
-		<attribute>
-			<description>
-				CKEditor events. Example: EventHandler eventHandler =
-				new EventHandler();
-				eventHandler.addEventHandler("instanceReady","function (ev) {
-				alert(\"Loaded: \" + ev.editor.name); }");
-			</description>
-			<name>events</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.EventHandler</type>
-		</attribute>
-		<attribute>
-			<description>
-				Global CKEditor events. Example: GlobalEventHandler
-				globalEventHandler = new GlobalEventHandler();
-				globalEventHandler.addEventHandler("dialogDefinition","function
-				(ev)
-				{ alert(\"Loading dialog window: \" + ev.data.name); }");
-			</description>
-			<name>globalEvents</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.GlobalEventHandler</type>
-		</attribute>
-	</tag>
-	<tag>
-		<display-name>inlineAll</display-name>
-		<name>inlineAll</name>
-		<tag-class>com.ckeditor.CKEditorInlineAllTag</tag-class>
-		<body-content>empty</body-content>
-		<description>
-			Builds inline editors inside all contenteditable elements available 
-			on JSP.
-		</description>
-		<example>
+        </example>
+        <attribute>
+            <description>
+                The path to the CKEditor directory.
+            </description>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                The name of the HTML textarea element that will be replaced by an 
+                editor instance or the ID attribute of the editable HTML element 
+                inside which the editor will be created.
+            </description>
+            <name>inline</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                A random set of numbers and/or letters used to work
+                around browser caching. It is useful after the CKEditor client-side
+                update. Once it is defined it will be attached to the request for
+                the ckeditor.js file, making the browser download new client-side resources.
+            </description>
+            <name>timestamp</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Initialization flag for ckeditor.js. Setting this
+                parameter to "true" means that the ckeditor.js script from CKEditor is
+                already included in the page and there is no need to add it again.
+                Setting it to "false", on the other hand, means that the ckeditor.js
+                script should be added to the page.
+            </description>
+            <name>initialized</name>
+            <rtexprvalue>true</rtexprvalue>
+            <required>false</required>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <description> 
+                CKEditor configuration. Example: 
+                CKEditorConfig config2 = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                'Source', '-', 'Bold', 'Italic' ]]");
+            </description>
+            <name>config</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.CKEditorConfig</type>
+        </attribute>
+        <attribute>
+            <description>
+                CKEditor events. Example: EventHandler eventHandler =
+                new EventHandler();
+                eventHandler.addEventHandler("instanceReady","function (ev) {
+                alert(\"Loaded: \" + ev.editor.name); }");
+            </description>
+            <name>events</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.EventHandler</type>
+        </attribute>
+        <attribute>
+            <description>
+                Global CKEditor events. Example: GlobalEventHandler
+                globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function
+                (ev)
+                { alert(\"Loading dialog window: \" + ev.data.name); }");
+            </description>
+            <name>globalEvents</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.GlobalEventHandler</type>
+        </attribute>
+    </tag>
+    <tag>
+        <display-name>inlineAll</display-name>
+        <name>inlineAll</name>
+        <tag-class>com.ckeditor.CKEditorInlineAllTag</tag-class>
+        <body-content>empty</body-content>
+        <description>
+            Builds inline editors inside all contenteditable elements available 
+            on JSP.
+        </description>
+        <example>
 			&lt;ckeditor:inlineAll basePath="ckeditor/"/&gt; 
-		</example>
-		<attribute>
-			<description>
-				Path to the CKEditor directory.
-			</description>
-			<name>basePath</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>		
-		<attribute>
-			<description>
-				A random set of numbers and/or letters used to work
-				around browser caching. It is useful after the CKEditor client-side
-				update. Once it is defined it will be attached to the request for
-				the ckeditor.js file, making the browser download new client-side resources.
-			</description>
-			<name>timestamp</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<description>
-				Initialization flag for ckeditor.js. Setting this
-				parameter to "true" means that the ckeditor.js script from CKEditor is
-				already included in the page and there is no need to add it again.
-				Setting it to "false", on the other hand, means that the ckeditor.js
-				script should be added to the page.
-			</description>
-			<name>initialized</name>
-			<rtexprvalue>true</rtexprvalue>
-			<required>false</required>
-			<type>boolean</type>
-		</attribute>				
-		<attribute>
-			<description>
-				Global CKEditor events. Example: GlobalEventHandler
-				globalEventHandler = new GlobalEventHandler();
-				globalEventHandler.addEventHandler("dialogDefinition","function
-				(ev)
-				{ alert(\"Loading dialog window: \" + ev.data.name); }");
-			</description>
-			<name>globalEvents</name>
-			<rtexprvalue>true</rtexprvalue>
-			<type>com.ckeditor.GlobalEventHandler</type>
-		</attribute>
-	</tag>
+        </example>
+        <attribute>
+            <description>
+                Path to the CKEditor directory.
+            </description>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>		
+        <attribute>
+            <description>
+                A random set of numbers and/or letters used to work
+                around browser caching. It is useful after the CKEditor client-side
+                update. Once it is defined it will be attached to the request for
+                the ckeditor.js file, making the browser download new client-side resources.
+            </description>
+            <name>timestamp</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>
+                Initialization flag for ckeditor.js. Setting this
+                parameter to "true" means that the ckeditor.js script from CKEditor is
+                already included in the page and there is no need to add it again.
+                Setting it to "false", on the other hand, means that the ckeditor.js
+                script should be added to the page.
+            </description>
+            <name>initialized</name>
+            <rtexprvalue>true</rtexprvalue>
+            <required>false</required>
+            <type>boolean</type>
+        </attribute>				
+        <attribute>
+            <description>
+                Global CKEditor events. Example: GlobalEventHandler
+                globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function
+                (ev)
+                { alert(\"Loading dialog window: \" + ev.data.name); }");
+            </description>
+            <name>globalEvents</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.ckeditor.GlobalEventHandler</type>
+        </attribute>
+    </tag>
 </taglib>
