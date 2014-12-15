@@ -131,7 +131,7 @@ public class CKEditorConfig implements Cloneable {
      * name provided as the key.
      *
      * @param key a string representing the configuration parameter name.
-     * @return object representing the configuration parameter value.
+     * @return an object representing the configuration parameter value.
      */
     public Object getConfigValue(final String key) {
         return config.get(key);
@@ -140,7 +140,7 @@ public class CKEditorConfig implements Cloneable {
     /**
      * Returns all editor instance configuration options.
      *
-     * @return {@code Map} storing all editor instance configuration options.
+     * @return a {@code Map} storing all editor instance configuration options.
      */
     public Map<String, Object> getConfigValues() {
         return config;

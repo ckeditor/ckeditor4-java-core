@@ -56,12 +56,10 @@ public class Utils {
             .matcher("");
 
     /**
-     * Returns a string wrapped into the HTML
-     * {@code &lt;script&gt;&lt;/script&gt;} tags.
+     * Returns a string wrapped with the HTML {@code <script></script>} tags.
      *
      * @param input the string to be wrapped.
-     * @return the string wrapped into the HTML
-     * {@code &lt;script&gt;&lt;/script&gt;} tags.
+     * @return the string wrapped with the HTML {@code <script></script>} tags.
      */
     public static String script(final String input) {
         StringBuilder out = new StringBuilder(
@@ -74,7 +72,7 @@ public class Utils {
     }
 
     /**
-     * Returns the HTML {@code &lt;script&gt;} tag which points to the
+     * Returns the HTML {@code <script>} tag which points to the
      * {@code ckeditor.js} file. If the second parameter is not an empty
      * {@code String} or {@code null}, a query string is appended to
      * {@code ckeditor.js}.
@@ -82,8 +80,7 @@ public class Utils {
      * @param basePath the path to the CKEditor installation directory.
      * @param args a string formed as a query string appended to
      * {@code ckeditor.js}.
-     * @return the HTML {@code &lt;script&gt;} tag pointing to
-     * {@code ckeditor.js}.
+     * @return the HTML {@code <script>} tag pointing to {@code ckeditor.js}.
      */
     public static String createCKEditorIncJS(final String basePath,
             final String args) {
@@ -93,7 +90,7 @@ public class Utils {
     }
 
     /**
-     * General method used to convert Java objects into JavaScript-acceptable
+     * General method used to convert Java objects into JavaScript-accepted
      * equivalents. The following Java objects are supported for conversion:
      * {@code String}, {@code Number}, {@code Boolean}, {@code Map},
      * {@code List}, {@code CKEditorConfig} and {@code null}. If another object
@@ -130,7 +127,7 @@ public class Utils {
     }
 
     /**
-     * Returns an acceptable form of a JavaScript string.
+     * Converts the Java {@code String} object into a JavaScript string.
      *
      * @param s a {@code String} object to encode.
      * @return a string representing an acceptable form of a JavaScript string.
@@ -259,7 +256,7 @@ public class Utils {
      * value for the editor which will be created on the {@code <textarea>}
      * element.
      *
-     * @param textareaAttributes The @{code Map} representing attributes for the
+     * @param textareaAttributes the {@code Map} representing attributes for the
      * {@code <textarea>} element that will be inserted into JSP and replaced by
      * an editor instance.
      *
@@ -286,7 +283,7 @@ public class Utils {
      * attributes. If no attributes are provided as a parameter, a predefined
      * set of attributes will be used.
      *
-     * @param textareaAttributes A {@code Map} representing attributes for the
+     * @param textareaAttributes a {@code Map} representing attributes for the
      * {@code <textarea>} element that will be inserted into JSP and replaced by
      * an editor instance.
      *

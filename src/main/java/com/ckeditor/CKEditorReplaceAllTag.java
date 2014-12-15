@@ -89,7 +89,7 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
      * be replaced by CKEditor instances.
      *
      * @param className the CSS class name that identifies {@code <textarea>}
-     * elements to replace on JSP.
+     * elements to be replaced on JSP.
      */
     public final void setClassName(final String className) {
         this.className = className;
@@ -103,7 +103,7 @@ public class CKEditorReplaceAllTag extends CKEditorTag {
      * not possible to return a particular CKEditor instance name. As a result
      * {@code null} is returned.
      *
-     * @return {@code null} because it is not possible to return the name of a
+     * @return {@code null}, because it is not possible to return the name of a
      * single editor instance.
      */
     @Override

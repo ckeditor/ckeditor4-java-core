@@ -368,7 +368,7 @@ public abstract class CKEditorTag extends TagSupport {
 
     /**
      * Returns a flag informing the CKEditor tag whether base parameters like
-     * the {@code ckeditor.js} script were already inserted into JSP.
+     * the {@code ckeditor.js} script have already been inserted into JSP.
      *
      * @return the Boolean flag informing whether CKEditor was initialized with
      * base parameters.

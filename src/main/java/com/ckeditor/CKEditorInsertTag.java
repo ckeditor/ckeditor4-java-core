@@ -70,13 +70,13 @@ public class CKEditorInsertTag extends CKEditorTag {
     }
 
     /**
-     * Inserts HTML {@code <textarea>} elment into JSP. The {@code <textarea>}
-     * is created based on the {@code Map} of properties ({@code <textarea>}
-     * attribute names and values) provided as the attribute of this tag or
-     * based on the tag's predefined {@code Map} of properties. The
-     * {@code <textarea>} element is then replaced with an editor instance.
+     * Inserts the HTML {@code <textarea>} element into JSP. The
+     * {@code <textarea>} is created based on the {@code Map} of properties
+     * ({@code <textarea>} attribute names and values) provided as the attribute
+     * of this tag or based on the tag's predefined {@code Map} of properties.
+     * The {@code <textarea>} element is then replaced with an editor instance.
      *
-     * @return {@code EVAL_PAGE} integer flag from the
+     * @return the {@code EVAL_PAGE} integer flag from the
      * {@code javax.servlet.jsp.tagext.Tag} class. This flag means that JSP can
      * be further evaluated.
      */
@@ -175,8 +175,8 @@ public class CKEditorInsertTag extends CKEditorTag {
      * href="http://www.w3schools.com/tags/tag_textarea.asp">W3Schools</a>
      * website.<br>
      * Please note, however, that attributes useful for CKEditor or that have
-     * any influence on it are {@code rows}, {@code cols}, {@code disabled} and
-     * {@code form}.
+     * any influence on it are just {@code rows}, {@code cols}, {@code disabled}
+     * and {@code form}.
      *
      * @param textareaAttr the {@code Map} of key-value pairs representing the
      * {@code <textarea>} attribute names and values.
