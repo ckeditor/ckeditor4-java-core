@@ -6,3 +6,4 @@
  * CKEditor for Java - the server-side integration of CKEditor.
  */
 package com.ckeditor;
+
