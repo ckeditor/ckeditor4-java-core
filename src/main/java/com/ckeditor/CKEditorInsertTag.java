@@ -7,6 +7,8 @@ package com.ckeditor;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.JspException;
@@ -33,6 +35,11 @@ import javax.servlet.jsp.JspWriter;
  */
 public class CKEditorInsertTag extends CKEditorTag {
 
+	/**
+	 * Private logger.
+	 */
+	private static final Logger ckeditorInsertTagLogger = Logger
+			.getLogger( CKEditorInsertTag.class.getName( ) );
 	/**
 	 * Serial identifier.
 	 */
@@ -81,20 +88,23 @@ public class CKEditorInsertTag extends CKEditorTag {
 	 *         JSP can be further evaluated.
 	 */
 	@Override
-	public int doStartTag( ) throws JspException {
+	public int doStartTag( ) {
 		JspWriter out = pageContext.getOut( );
 		try {
 			out.write( Utils.createTextareaTag( editor, value,
 					textareaAttributes ) );
-		} catch ( Exception e ) {
+		} catch ( IOException ie ) {
+			ckeditorInsertTagLogger.log( Level.SEVERE,
+					"Could not create CKEditorInsertTag.", ie );
 			try {
 				HttpServletResponse resp = ( HttpServletResponse ) pageContext
 						.getResponse( );
 				resp.reset( );
 				resp.sendError( HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
 						"Problem with tag creation." );
-			} catch ( IOException e1 ) {
-				throw new JspException( e1 );
+			} catch ( IOException ioe ) {
+				ckeditorInsertTagLogger.log( Level.SEVERE,
+						"Could not return response to the client.", ioe );
 			}
 		}
 		return EVAL_PAGE;

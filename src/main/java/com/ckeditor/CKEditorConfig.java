@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * The {@code CKEditorConfig} class is used to create a set of configuration
@@ -17,6 +19,11 @@ import java.util.Set;
  */
 public class CKEditorConfig implements Cloneable {
 
+	/**
+	 * Private logger.
+	 */
+	private static final Logger ckeditorConfigLogger = Logger
+			.getLogger( CKEditorConfig.class.getName( ) );
 	/**
 	 * {@code Map} storing the set of key-value pairs representing CKEditor
 	 * configuration options.
@@ -215,6 +222,8 @@ public class CKEditorConfig implements Cloneable {
 			}
 			return cfg;
 		} catch ( CloneNotSupportedException e ) {
+			ckeditorConfigLogger.log( Level.WARNING,
+					"Could not clone configuration. Returning null.", e );
 			return null;
 		}
 	}
