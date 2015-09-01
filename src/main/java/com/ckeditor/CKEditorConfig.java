@@ -222,9 +222,12 @@ public class CKEditorConfig implements Cloneable {
 			}
 			return cfg;
 		} catch ( CloneNotSupportedException e ) {
-			ckeditorConfigLogger.log( Level.WARNING,
-					"Could not clone configuration. Returning null.", e );
-			return null;
+			ckeditorConfigLogger
+					.log( Level.WARNING,
+							"Could not clone configuration. "
+									+ "Returning empty configuration object as a fall back.",
+							e );
+			return new CKEditorConfig( );
 		}
 	}
 
