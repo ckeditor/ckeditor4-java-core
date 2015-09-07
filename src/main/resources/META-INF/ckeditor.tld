@@ -2,8 +2,8 @@
 <taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd">
-    <description> The CKEditor Tag Library offers a convenient way to
-        create several CKEditor instances with different configurations.
+    <description>The CKEditor Java Tag Library offers a convenient way to create editor
+         instances with Java code only.
     </description>
     <display-name>CKEditor for Java Tag Library</display-name>
     <tlib-version>4.0</tlib-version>
@@ -48,11 +48,10 @@
         </attribute>
         <attribute>
             <description> 
-                Initialization flag for ckeditor.js. Setting this
-                parameter to "true" means that the ckeditor.js script from CKEditor is
-                already included in the page and there is no need to add it again.
-                Setting it to "false", on the other hand, means that the ckeditor.js
-                script should be added to the page.
+                Initialization flag for ckeditor.js. Setting this parameter to "true" means that 
+                the ckeditor.js script is already included in the web page and there is no need to 
+                add it again. Setting it to "false", on the other hand, means that the CKEditor tag 
+                should insert ckeditor.js script to the web page.
             </description>
             <name>initialized</name>
             <rtexprvalue>true</rtexprvalue>
@@ -60,8 +59,8 @@
         </attribute>
         <attribute>
             <description> 
-                CKEditor configuration. Example: CKEditorConfig config2
-                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                CKEditor configuration. Example: CKEditorConfig config
+                = new CKEditorConfig(); config.addConfigValue("toolbar","[[
                 'Source', '-', 'Bold', 'Italic' ]]");
             </description>
             <name>config</name>
@@ -81,8 +80,9 @@
         </attribute>
         <attribute>
             <description>
-                Global CKEditor events. Example: GlobalEventHandler
-                globalEventHandler = new GlobalEventHandler();
+                CKEditor global events applicable for evry editor instance on web page.
+                Example: 
+                GlobalEventHandler globalEventHandler = new GlobalEventHandler();
                 globalEventHandler.addEventHandler("dialogDefinition","function (ev)
                 { alert(\"Loading dialog window: \" + ev.data.name); }");
             </description>
@@ -149,11 +149,10 @@
         </attribute>
         <attribute>
             <description>
-                Initialization flag for ckeditor.js. Setting this
-                parameter to "true" means that the ckeditor.js script from CKEditor is
-                already included in the page and there is no need to add it again.
-                Setting it to "false", on the other hand, means that the ckeditor.js
-                script should be added to the page.
+                Initialization flag for ckeditor.js. Setting this parameter to "true" means that 
+                the ckeditor.js script is already included in the web page and there is no need to 
+                add it again. Setting it to "false", on the other hand, means that the CKEditor tag 
+                should insert ckeditor.js script to the web page.
             </description>
             <name>initialized</name>
             <rtexprvalue>true</rtexprvalue>
@@ -161,8 +160,8 @@
         </attribute>
         <attribute>
             <description>
-                CKEditor configuration. Example: CKEditorConfig config2
-                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                CKEditor configuration. Example: CKEditorConfig config
+                = new CKEditorConfig(); config.addConfigValue("toolbar","[[
                 'Source', '-', 'Bold', 'Italic' ]]");
             </description>
             <name>config</name>
@@ -182,8 +181,9 @@
         </attribute>
         <attribute>
             <description>
-                Global CKEditor events. Example: GlobalEventHandler
-                globalEventHandler = new GlobalEventHandler();
+                CKEditor global events applicable for evry editor instance on web page.
+                Example: 
+                GlobalEventHandler globalEventHandler = new GlobalEventHandler();
                 globalEventHandler.addEventHandler("dialogDefinition","function (ev)
                 { alert(\"Loading dialog window: \" + ev.data.name); }");
             </description>
@@ -237,11 +237,10 @@
         </attribute>
         <attribute>
             <description>
-                Initialization flag for ckeditor.js. Setting this
-                parameter to "true" means that the ckeditor.js script from CKEditor is
-                already included in the page and there is no need to add it again.
-                Setting it to "false", on the other hand, means that the ckeditor.js
-                script should be added to the page.
+                Initialization flag for ckeditor.js. Setting this parameter to "true" means that 
+                the ckeditor.js script is already included in the web page and there is no need to 
+                add it again. Setting it to "false", on the other hand, means that the CKEditor tag 
+                should insert ckeditor.js script to the web page.
             </description>
             <name>initialized</name>
             <rtexprvalue>true</rtexprvalue>
@@ -249,8 +248,8 @@
         </attribute>
         <attribute>
             <description>
-                CKEditor configuration. Example: CKEditorConfig config2
-                = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                CKEditor configuration. Example: CKEditorConfig config
+                = new CKEditorConfig(); config.addConfigValue("toolbar","[[
                 'Source', '-', 'Bold', 'Italic' ]]");
             </description>
             <name>config</name>
@@ -270,8 +269,9 @@
         </attribute>
         <attribute>
             <description>
-                Global CKEditor events. Example: GlobalEventHandler
-                globalEventHandler = new GlobalEventHandler();
+                CKEditor global events applicable for evry editor instance on web page.
+                Example: 
+                GlobalEventHandler globalEventHandler = new GlobalEventHandler();
                 globalEventHandler.addEventHandler("dialogDefinition","function (ev)
                 { alert(\"Loading dialog window: \" + ev.data.name); }");
             </description>
@@ -323,11 +323,10 @@
         </attribute>
         <attribute>
             <description>
-                Initialization flag for ckeditor.js. Setting this
-                parameter to "true" means that the ckeditor.js script from CKEditor is
-                already included in the page and there is no need to add it again.
-                Setting it to "false", on the other hand, means that the ckeditor.js
-                script should be added to the page.
+                Initialization flag for ckeditor.js. Setting this parameter to "true" means that 
+                the ckeditor.js script is already included in the web page and there is no need to 
+                add it again. Setting it to "false", on the other hand, means that the CKEditor tag 
+                should insert ckeditor.js script to the web page.
             </description>
             <name>initialized</name>
             <rtexprvalue>true</rtexprvalue>
@@ -337,7 +336,7 @@
         <attribute>
             <description> 
                 CKEditor configuration. Example: 
-                CKEditorConfig config2 = new CKEditorConfig(); config2.addConfigValue("toolbar","[[
+                CKEditorConfig config = new CKEditorConfig(); config.addConfigValue("toolbar","[[
                 'Source', '-', 'Bold', 'Italic' ]]");
             </description>
             <name>config</name>
@@ -357,10 +356,10 @@
         </attribute>
         <attribute>
             <description>
-                Global CKEditor events. Example: GlobalEventHandler
-                globalEventHandler = new GlobalEventHandler();
-                globalEventHandler.addEventHandler("dialogDefinition","function
-                (ev)
+                CKEditor global events applicable for evry editor instance on web page.
+                Example: 
+                GlobalEventHandler globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function (ev)
                 { alert(\"Loading dialog window: \" + ev.data.name); }");
             </description>
             <name>globalEvents</name>
@@ -401,11 +400,10 @@
         </attribute>
         <attribute>
             <description>
-                Initialization flag for ckeditor.js. Setting this
-                parameter to "true" means that the ckeditor.js script from CKEditor is
-                already included in the page and there is no need to add it again.
-                Setting it to "false", on the other hand, means that the ckeditor.js
-                script should be added to the page.
+                Initialization flag for ckeditor.js. Setting this parameter to "true" means that 
+                the ckeditor.js script is already included in the web page and there is no need to 
+                add it again. Setting it to "false", on the other hand, means that the CKEditor tag 
+                should insert ckeditor.js script to the web page.
             </description>
             <name>initialized</name>
             <rtexprvalue>true</rtexprvalue>
@@ -414,10 +412,10 @@
         </attribute>				
         <attribute>
             <description>
-                Global CKEditor events. Example: GlobalEventHandler
-                globalEventHandler = new GlobalEventHandler();
-                globalEventHandler.addEventHandler("dialogDefinition","function
-                (ev)
+                CKEditor global events applicable for evry editor instance on web page.
+                Example: 
+                GlobalEventHandler globalEventHandler = new GlobalEventHandler();
+                globalEventHandler.addEventHandler("dialogDefinition","function (ev)
                 { alert(\"Loading dialog window: \" + ev.data.name); }");
             </description>
             <name>globalEvents</name>
