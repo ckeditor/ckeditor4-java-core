@@ -22,7 +22,7 @@ The CKEditor for Java API is also available online at: http://link-to-api.com
 
 ## CKEditor for Java web application
 
-If you are interested in examples showing how CKEditor for Java can be used inside a web application, please visit https://github.com/ckeditor/ckeditor-java-webapp
+If you are interested in examples showing how CKEditor for Java can be used inside a web application, please visit https://github.com/ckeditor/ckeditor-java-samples
 
 ## License
 
