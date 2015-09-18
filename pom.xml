@@ -30,11 +30,10 @@
             <url>http://www.mozilla.org/MPL/MPL-1.1.html</url>
         </license>
     </licenses>
-    <!-- Needs UPDATE!! -->
     <scm>
-        <url>http://svn.ckeditor.com/CKEditor.Java/ckeditor-java-core/trunk</url>
-        <connection>scm:svn:http://svn.ckeditor.com/CKEditor.Java/ckeditor-java-core/trunk</connection>
-        <developerConnection>scm:svn:https://svn.ckeditor.com/CKEditor.Java/ckeditor-java-core/trunk</developerConnection>
+        <url>https://github.com/ckeditor/ckeditor-java-core</url>
+        <connection>scm:git:https://github.com/ckeditor/ckeditor-java-core</connection>
+        <developerConnection>scm:git:https://github.com/ckeditor/ckeditor-java-core</developerConnection>
     </scm>
     <build>
         <resources>
