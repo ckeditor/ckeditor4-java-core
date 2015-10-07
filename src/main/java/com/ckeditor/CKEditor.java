@@ -6,7 +6,6 @@ import java.util.HashMap;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import com.ckeditor.Utils;
 
 /**
  * The {@code CKEditor} class is used to create CKEditor objects in Java. Such objects can then be put in scope (like in a request or a
