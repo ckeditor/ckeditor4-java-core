@@ -1,11 +1,14 @@
-CKEditor for Java
-===================
+# ⚠ This repository is no longer maintained ⚠
 
-**Important Note**
+## CKEditor 4 for Java
 
-The CKEditor for Java code is still **work in progress**. Its official release will be announced on http://ckeditor.com.
+This project was supposed to provide a CKEditor 4 for Java integration to simplify the use of CKEditor 4 library in Java applications. It has not been completed, use it at your own risk.
 
-CKEditor for Java is a server-side integration for CKEditor. It allows you to use this popular JavaScript editor
+Please note that CKEditor is a JavaScript editor and as such may work with any web application, regardless of the server-side language that the project is using, including Java-based apps. A dedicated "server-side integration" is not required to include CKEditor 4 in your application.
+
+---
+
+CKEditor 4 for Java is a server-side integration for CKEditor. It allows you to use this popular JavaScript editor
 in Java Server Pages (JSP) as a custom JSP tag or as a Java Object integrated with the code of your web application.
 
 ## Getting the code
